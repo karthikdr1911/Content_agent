@@ -1,3 +1,8 @@
+=======
+# Content_agent
+AI content manager agent to automate content building with high adherence to brand guidelines. 
+
+>>>>>>> 7bad15b0 (checkpoint: v0.1)
 # content-agent
 
 ## Overview
@@ -51,4 +56,8 @@ SHEET_ID=your_sheet_id
 - For type errors, ensure all dependencies are installed and up to date.
 
 ## Default Output Storage
+<<<<<<< HEAD
 - Google Sheets (can switch to Supabase later) 
+=======
+- Google Sheets (can switch to Supabase later) 
+>>>>>>> 7bad15b0 (checkpoint: v0.1)
