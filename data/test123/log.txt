@@ -1,0 +1,12 @@
+[2025-07-04T02:49:19.057Z] Error: Command failed: npx remotion render templates/remotionRoot.tsx VideoTemplate data\test123\finalVideo.mp4 --props=data\test123\remotion-props.json --overwrite
+[2025-07-04T02:49:21.591Z] Fallback: Rendered with FFmpeg
+[2025-07-08T04:36:58.138Z] Error: Command failed: npx remotion render templates/remotionRoot.tsx VideoTemplate data\test123\finalVideo.mp4 --props=data\test123\remotion-props.json --overwrite
+[2025-07-08T04:36:59.424Z] Fallback: Rendered with FFmpeg
+[2025-07-08T04:38:00.908Z] Error: Command failed: npx remotion render templates/remotionRoot.tsx VideoTemplate data\test123\finalVideo.mp4 --props=data\test123\remotion-props.json --overwrite
+[2025-07-08T04:38:02.378Z] Fallback: Rendered with FFmpeg
+[2025-07-08T04:39:58.335Z] Error: Command failed: npx remotion render templates/remotionRoot.tsx VideoTemplate data\test123\finalVideo.mp4 --props=data\test123\remotion-props.json --overwrite
+[2025-07-08T04:39:59.182Z] Fallback: Rendered with FFmpeg
+[2025-07-11T14:21:22.142Z] Used user image for section 1: data\test123\user_img_1.jpg
+[2025-07-11T14:21:22.143Z] Used user image for section 2: data\test123\user_img_2.png
+[2025-07-11T14:21:23.374Z] Error: DALL·E image generation failed
+[2025-07-11T14:21:24.782Z] Fallback: Rendered with FFmpeg
