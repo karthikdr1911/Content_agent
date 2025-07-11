@@ -1,6 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import { execSync } from 'child_process';
+import { generateImageForSection } from './dalleService';
 
 interface Script {
   intro: string;
@@ -24,13 +25,28 @@ export async function renderVideo({ uuid, script, voiceoverPath }: RenderParams)
   try {
     if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
+    // Generate DALL·E images for each section
+    const imagePrompts = [
+      script.intro,
+      ...script.points,
+      script.outro,
+      script.cta
+    ];
+    const imagePaths: string[] = [];
+    for (let i = 0; i < imagePrompts.length; i++) {
+      const imgPath = path.join(dataDir, `dalle_img_${i + 1}.png`);
+      await generateImageForSection(imagePrompts[i], imgPath);
+      imagePaths.push(imgPath);
+    }
+
     // Prepare props for Remotion
     const props = {
       intro: script.intro,
       points: script.points,
       outro: script.outro,
       cta: script.cta,
-      voiceoverPath: path.resolve(voiceoverPath)
+      voiceoverPath: path.resolve(voiceoverPath),
+      images: imagePaths.map(p => path.resolve(p))
     };
     const propsPath = path.join(dataDir, 'remotion-props.json');
     fs.writeFileSync(propsPath, JSON.stringify(props));

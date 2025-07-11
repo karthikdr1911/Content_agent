@@ -7,20 +7,35 @@ export interface VideoTemplateProps {
   outro: string;
   cta: string;
   voiceoverPath: string;
+  images: string[]; // [intro, ...points, outro, cta]
 }
 
-// Placeholder for the animated video content
-const VideoTemplate: React.FC<VideoTemplateProps> = ({ intro, points, outro, cta, voiceoverPath }) => {
-  // TODO: Implement text animation, timing, and audio overlay using Remotion primitives
+// Animated video content with images
+const VideoTemplate: React.FC<VideoTemplateProps> = ({ intro, points, outro, cta, voiceoverPath, images }) => {
+  // Map images to sections: [intro, ...points, outro, cta]
+  let imgIdx = 0;
   return (
     <div style={{ background: '#111', color: '#fff', width: '100%', height: '100%' }}>
+      {/* Intro */}
+      {images?.[imgIdx] && <img src={images[imgIdx]} alt="Intro" style={{ width: '100%', maxHeight: 360, objectFit: 'cover' }} />}
       <h1>{intro}</h1>
+      {/* Points */}
       <ul>
-        {points.map((pt, i) => (
-          <li key={i}>{pt}</li>
-        ))}
+        {points.map((pt, i) => {
+          imgIdx++;
+          return (
+            <li key={i} style={{ marginBottom: 24 }}>
+              {images?.[imgIdx] && <img src={images[imgIdx]} alt={`Point ${i + 1}`} style={{ width: '100%', maxHeight: 360, objectFit: 'cover' }} />}
+              <div>{pt}</div>
+            </li>
+          );
+        })}
       </ul>
+      {/* Outro */}
+      {images?.[imgIdx + 1] && <img src={images[imgIdx + 1]} alt="Outro" style={{ width: '100%', maxHeight: 360, objectFit: 'cover' }} />}
       <h2>{outro}</h2>
+      {/* CTA */}
+      {images?.[imgIdx + 2] && <img src={images[imgIdx + 2]} alt="CTA" style={{ width: '100%', maxHeight: 360, objectFit: 'cover' }} />}
       <h3>{cta}</h3>
       {/* TODO: Add Remotion <Audio> component for voiceoverPath */}
     </div>
@@ -43,7 +58,8 @@ export const RemotionRoot: React.FC = () => (
       points: [],
       outro: '',
       cta: '',
-      voiceoverPath: ''
+      voiceoverPath: '',
+      images: []
     }}
   />
 ); 
