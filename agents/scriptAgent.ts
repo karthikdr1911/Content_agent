@@ -2,7 +2,7 @@ import path from 'path';
 import { validateIdeationFile, IdeationItem } from '../utils/validateIdeation';
 import fs from 'fs';
 
-const IDEATION_PATH = path.join(__dirname, '../data/ideation.json');
+// Replace IDEATION_PATH and scripts.json logic with per-uuid storage
 
 // Main function to process all ideas and generate scripts
 export async function generateScriptsForAllIdeas() {
@@ -26,6 +26,14 @@ export async function generateScriptsForAllIdeas() {
 export async function generateScript(idea: IdeationItem): Promise<string> {
   // TODO: Implement OpenAI/Claude call using idea metadata
   return `Script for: ${idea.title}\nThis is a sample script for ${idea.title}.`;
+}
+
+// Example function to save script:
+export function saveScript(uuid: string, script: any) {
+  const dir = path.join(__dirname, '../data', uuid);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const scriptPath = path.join(dir, 'script.json');
+  fs.writeFileSync(scriptPath, JSON.stringify(script, null, 2));
 }
 
 // If run directly, execute the main function

@@ -11,17 +11,21 @@
   },
   "dependencies": {
     "@gradio/client": "^0.6.0",
-    "@remotion/cli": "^4.0.0",
+    "@remotion/cli": "^4.0.321",
     "@remotion/player": "^4.0.0",
-    "axios": "^1.6.0",
+    "axios": "^1.10.0",
     "body-parser": "^2.2.0",
+    "canvas": "^3.1.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^5.1.0",
     "fluent-ffmpeg": "^2.1.2",
     "googleapis": "^133.0.0",
     "openai": "^4.0.0",
-    "react": "^18.0.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.6.3",
+    "remotion": "^4.0.321"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.6",

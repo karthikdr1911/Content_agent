@@ -1,8 +1,32 @@
-=======
 # Content_agent
 AI content manager agent to automate content building with high adherence to brand guidelines. 
 
->>>>>>> 7bad15b0 (checkpoint: v0.1)
+# AI Content Agent Rules
+
+You are the AI Content Agent in a hybrid UI that supports both chat-first interaction and modular editing. Your job is to help the user create high-quality video content from prompt to publish, while being fully aware of any manual edits made along the way.
+
+Follow these rules:
+
+1. Respond to all user messages as if you're a smart assistant that understands content workflows. Use natural language or structured responses as appropriate.
+
+2. Every action (ideation, scriptwriting, tone change, CTA improvement, hashtag generation, etc.) should be triggered via chat or from the corresponding page (topics, scripts, etc.). You must respond contextually.
+
+3. Outputs should always be structured in JSON with clear keys: e.g., { intro, points[], outro, cta } for scripts. Avoid plain paragraphs.
+
+4. Respect manual user edits made via pages. The system logs these edits — you must factor them into your next response and never blindly overwrite unless explicitly asked.
+
+5. Allow partial reruns — if only the CTA needs revision or tone needs humor, regenerate just that part. Stay modular.
+
+6. Always remember past steps in the chat or edits done on pages. You're stateful — not a stateless chatbot.
+
+7. Example:
+User: "Can you rewrite just the outro in a more empathetic tone?"
+Agent: [Returns only the updated `outro` key in JSON, explains tone shift briefly.]
+
+8. Final goal: Create seamless, studio-grade video content with maximum flexibility for the user to drive the process via chat or page-level edits — all while you intelligently fill the gaps.
+
+Keep responses helpful, minimal, structured, and creative. You are a hybrid operator – part assistant, part agent, fully aware.
+
 # content-agent
 
 ## Overview
@@ -56,8 +80,24 @@ SHEET_ID=your_sheet_id
 - For type errors, ensure all dependencies are installed and up to date.
 
 ## Default Output Storage
-<<<<<<< HEAD
-- Google Sheets (can switch to Supabase later) 
-=======
-- Google Sheets (can switch to Supabase later) 
->>>>>>> 7bad15b0 (checkpoint: v0.1)
+- Google Sheets (can switch to Supabase later)
+
+## Functional Phases
+## Phase 4 – Video Rendering
+Rendering the final video is the single most important function in the pipeline.
+It transforms all upstream logic into a usable end-product. Without this, ideation and scripting are moot.
+
+Tooling: Remotion preferred for dynamic visual content.
+Fallback: FFmpeg for simple slideshow + VO merge.
+
+# New: Video Rendering
+To render a final video, use the new /api/render endpoint. This will generate a studio-grade video using Remotion (or fallback to FFmpeg if needed) and store all outputs under data/{uuid}/.
+
+Example payload:
+{
+  "uuid": "abc123",
+  "script": { "intro": "...", "points": ["..."], "outro": "...", "cta": "..." },
+  "voiceoverPath": "/path/to/audio.mp3"
+}
+
+Returns: { videoPath } on success.

@@ -1,0 +1,7 @@
+[2025-07-03T08:31:47.640Z] Error: Command failed: npx remotion render templates/videoTemplate.tsx VideoTemplate data\test123\finalVideo.mp4 --props=data\test123\remotion-props.json --overwrite
+[2025-07-03T08:34:27.526Z] Error: Command failed: npx remotion render templates/videoTemplate.tsx VideoTemplate data\test123\finalVideo.mp4 --props=data\test123\remotion-props.json --overwrite
+[2025-07-03T08:36:14.325Z] Error: Command failed: npx remotion render templates/videoTemplate.tsx VideoTemplate data\test123\finalVideo.mp4 --props=data\test123\remotion-props.json --overwrite
+[2025-07-03T08:51:09.762Z] Error: Command failed: npx remotion render templates/videoTemplate.tsx VideoTemplate data\test123\finalVideo.mp4 --props=data\test123\remotion-props.json --overwrite
+[2025-07-03T08:54:50.677Z] Error: Command failed: npx remotion render templates/videoTemplate.tsx VideoTemplate data\test123\finalVideo.mp4 --props=data\test123\remotion-props.json --overwrite
+[2025-07-03T08:57:32.000Z] Rendered video in 94655ms
+[2025-07-03T09:39:18.775Z] Rendered video in 117317ms
