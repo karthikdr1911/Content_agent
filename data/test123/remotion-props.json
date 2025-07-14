@@ -1,1 +1,1 @@
-{"intro":"John Wick 5 is coming","points":["to the theaters","Next to you!"],"outro":"Get your bulletproof suits now","cta":"The Continental awaits","voiceoverPath":"C:\\Users\\Karthik DR\\Content_agent_backend\\data\\test123\\voiceover.mp3"}
+{"uuid":"test123","images":["data\\test123\\user_img_1.jpg","data\\test123\\user_img_2.jpg"],"intro":"Test Intro","points":["1st point","2nd point"],"outro":"Test outro","cta":"Take action!","voiceoverPath":""}

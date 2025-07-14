@@ -54,7 +54,7 @@ export async function renderVideo({ uuid, script, voiceoverPath, userImages }: R
     fs.writeFileSync(propsPath, JSON.stringify(props));
 
     // Remotion CLI render command
-    const remotionCmd = `npx remotion render templates/remotionRoot.tsx VideoTemplate ${videoPath} --props=${propsPath} --overwrite`;
+    const remotionCmd = `npx remotion render templates/remotionRoot.tsx MVP ${videoPath} --props=${propsPath} --overwrite`;
     execSync(remotionCmd, { stdio: 'inherit' });
 
     fs.appendFileSync(logPath, `[${new Date().toISOString()}] Rendered video in ${Date.now() - start}ms\n`);

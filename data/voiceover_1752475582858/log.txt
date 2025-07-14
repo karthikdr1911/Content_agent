@@ -1,0 +1,4 @@
+[2025-07-14T06:48:21.771Z] Used user image for section 1: data\voiceover_1752475582858\user_img_1.jpg
+[2025-07-14T06:48:21.771Z] Used user image for section 2: data\voiceover_1752475582858\user_img_2.jpg
+[2025-07-14T06:48:22.696Z] Error: DALL·E image generation failed
+[2025-07-14T06:48:23.348Z] Fallback: Rendered with FFmpeg

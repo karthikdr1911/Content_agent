@@ -1,0 +1,1 @@
+{"uuid":"voiceover_1752475582858","images":["data\\voiceover_1752475582858\\user_img_1.jpg","data\\voiceover_1752475582858\\user_img_2.jpg"],"intro":"Generates separate video UUID","points":["Passes video UUID to renderVideo"],"outro":"Returns correct video path","cta":"Thank you!","voiceoverPath":"data\\voiceover_1752475582858\\voiceover.mp3"}
