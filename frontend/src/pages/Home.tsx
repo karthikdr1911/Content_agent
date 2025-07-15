@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import MainLayout from '../layout/MainLayout';
 import ChatBubble from '../components/ChatBubble';
 import ChatInput from '../components/ChatInput';
