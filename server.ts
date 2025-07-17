@@ -6,13 +6,11 @@ import cors from 'cors';
 console.log('Loaded OPENAI_API_KEY:', process.env.OPENAI_API_KEY);
 import { generateTopics } from './agents/ideationAgent.js';
 import renderRoutes from './routes/render';
-import voiceoverRoutes from './routes/voiceover';
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(renderRoutes);
-app.use('/voiceover', voiceoverRoutes);
 
 app.post('/api/generate-topics', async (req, res) => {
   console.log('Received /api/generate-topics request:', req.body);
