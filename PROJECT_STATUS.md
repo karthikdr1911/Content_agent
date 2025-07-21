@@ -53,3 +53,10 @@ Place these in respective .env files in frontend/ and backend/ as needed.
 ## 📌 Final Goal
 
 A production-ready, testable pipeline to generate video content from a single prompt — fully previewable and logged — split cleanly across a backend API and a Cursor-powered frontend. 
+
+## Checkpoint: Scene-Based Animation System (UNTESTED)
+
+- Steps 1-7 implemented (see README for details)
+- All animation, overlay, and transition logic is parameterized and extensible
+- No hardcoding; all features are driven by payload
+- **UNTESTED:** End-to-end validation and sample payload testing are still pending 

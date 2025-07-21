@@ -101,3 +101,18 @@ Example payload:
 }
 
 Returns: { videoPath } on success.
+
+## Checkpoint: Scene-Based Animation System (UNTESTED)
+
+As of [2025-xx-xx], the following features have been implemented for scene-based video rendering (Remotion):
+- Step 1: Image/asset animation (parameterized, fade-in/fade-out)
+- Step 2: Text and overlay animation (parameterized, fade/slide)
+- Step 3: Animated shape/graphic overlays (rect, circle, SVG, parameterized)
+- Step 4: Animated transitions between scenes (parameterized, crossfade default)
+- Step 5: Per-scene audio/voiceover support (parameterized)
+- Step 6: Dynamic scene duration/timing (parameterized, audio/content-driven)
+- Step 7: Extensible animation/overlay/transition system (helper-based, maintainable)
+
+**Status:**
+- This checkpoint is tagged as **UNTESTED**. Full end-to-end testing with real payloads is pending.
+- See `PROJECT_STATUS.md` for more details.
